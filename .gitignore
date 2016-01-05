@@ -1,0 +1,3 @@
+obj/Debug/*.txt
+bin/Debug/Logs
+bin/Release/Logs

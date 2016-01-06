@@ -55,12 +55,13 @@ namespace ChatClient
                     formatter.Serialize(stream, Requests.CloseConnection);
                     // Отправить серверу никнейм отключившегося пользователя
                     formatter.Serialize(stream, tbNickname.Text);
+                    currentClient.Close();
                 }
             }
             catch (Exception ex)
             {
                 LoggerEvs.writeLog("Проблемы с отключением от сервера.");
-            }
+            }            
         }        
 
         private void btnEnterToChat_Click(object sender, EventArgs e)
